@@ -9,13 +9,21 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
+import { UserListComponent } from './user-list/user-list.component';
+import { UserCreateComponent } from './user-create/user-create.component';
+import {HttpClientModule} from '@angular/common/http';
+import { HeartListComponent } from './heart-list/heart-list.component';
+
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, UserListComponent, UserCreateComponent, HeartListComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+  HttpClientModule
   ],
   providers: [
     StatusBar,
